@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>झारखंड सामाजिक नाविन्यता पोर्टल</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
-    <!-- Header / शीर्षभाग (सुधारित नेव्हिगेशनसह) -->
+    <!-- Header / शीर्षभाग -->
     <header>
         <h1>झारखंड सोशल इनोव्हेशन पोर्टल</h1>
         <nav>
-            <a href="index.html">नागरिक पोर्टल (समस्या सबमिट करा)</a>
-            <a href="university.html">विद्यापीठ डॅशबोर्ड</a>
-            <a href="industry.html">उद्योग भागीदारी</a>
+            <a href="{{ url_for('home') }}">नागरिक पोर्टल (समस्या सबमिट करा)</a>
+            <a href="{{ url_for('university') }}">विद्यापीठ डॅशबोर्ड</a>
+            <a href="{{ url_for('industry') }}">उद्योग भागीदारी</a>
         </nav>
     </header>
 
@@ -79,3 +79,200 @@
 
 </body>
 </html>
+```[cite: 1]
+
+---
+
+### २. `university.html` (टेम्प्लेट्स फोल्डरमध्ये ठेवा)
+```html
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>विद्यापीठ डॅशबोर्ड - झारखंड सोशल इनोव्हेशन पोर्टल</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .dashboard-container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .problem-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #fafafa;
+        }
+        .problem-card h3 {
+            margin-top: 0;
+            color: #1e3a8a;
+        }
+        .badge {
+            display: inline-block;
+            padding: 5px 10px;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 4px;
+            background-color: #fef08a;
+            color: #854d0e;
+        }
+        .action-btn {
+            background-color: #16a34a;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .action-btn:hover {
+            background-color: #15803d;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / शीर्षभाग -->
+    <header>
+        <h1>झारखंड सोशल इनोव्हेशन पोर्टल</h1>
+        <nav>
+            <a href="{{ url_for('home') }}">नागरिक पोर्टल (समस्या सबमिट करा)</a>
+            <a href="{{ url_for('university') }}">विद्यापीठ डॅशबोर्ड</a>
+            <a href="{{ url_for('industry') }}">उद्योग भागीदारी</a>
+        </nav>
+    </header>
+
+    <!-- Main Dashboard Content -->
+    <main class="dashboard-container">
+        <h2>तुमच्या विद्यापीठाला प्राप्त झालेल्या समस्या</h2>
+        <p>खालील समस्यांवर बहुविद्याशाखीय विद्यार्थी संघ (Student Teams) नियुक्त करा.</p>
+        <hr style="margin-bottom: 20px; border: 0; border-top: 1px solid #ddd;">
+
+        <!-- Problem Card 1 -->
+        <div class="problem-card">
+            <span class="badge">जल व्यवस्थापन (Water Resources)</span>
+            <h3>रांची ग्रामीण भागातील पिण्याच्या पाण्याची टंचाई</h3>
+            <p><strong>जिल्हा:</strong> रांची (Ranchi)</p>
+            <p><strong>वर्णन:</strong> गावातील विहिरींची पाणीपातळी उन्हाळ्यात खूप खाली जाते, ज्यामुळे महिलांना पाण्यासाठी दूरवर जावे लागते. कमी खर्चाच्या जलसंधारण उपायांची गरज आहे.</p>
+            <button class="action-btn" onclick="alert('संघ (Team) नेमणूक प्रक्रिया सुरू होत आहे...')">विद्यार्थी संघ नियुक्त करा</button>
+        </div>
+
+        <!-- Problem Card 2 -->
+        <div class="problem-card">
+            <span class="badge">कृषी (Agriculture)</span>
+            <h3>धनबाद परिसरातील भाजीपाल्याची साठवणूक आणि वाहतूक</h3>
+            <p><strong>जिल्हा:</strong> धनबाद (Dhanbad)</p>
+            <p><strong>वर्णन:</strong> स्थानिक शेतकऱ्यांना भाजीपाल्याचे योग्य मूल्य मिळत नाही कारण कोल्ड स्टोरेज आणि वाहतुकीच्या पुरेशा सुविधा नाहीत.</p>
+            <button class="action-btn" onclick="alert('संघ (Team) नेमणूक प्रक्रिया सुरू होत आहे...')">विद्यार्थी संघ नियुक्त करा</button>
+        </div>
+
+    </main>
+
+</body>
+</html>
+```[cite: 3]
+
+---
+
+### ३. `industry.html` (टेम्प्लेट्स फोल्डरमध्ये ठेवा)
+```html
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>उद्योग भागीदारी डॅशबोर्ड - झारखंड सोशल इनोव्हेशन पोर्टल</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .dashboard-container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .project-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #f8fafc;
+        }
+        .project-card h3 {
+            margin-top: 0;
+            color: #1e3a8a;
+        }
+        .status-badge {
+            display: inline-block;
+            padding: 5px 10px;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 4px;
+            background-color: #dbfafe;
+            color: #0369a1;
+        }
+        .fund-btn {
+            background-color: #2563eb;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .fund-btn:hover {
+            background-color: #1d4ed8;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / शीर्षभाग -->
+    <header>
+        <h1>झारखंड सोशल इनोव्हेशन पोर्टल</h1>
+        <nav>
+            <a href="{{ url_for('home') }}">नागरिक पोर्टल (समस्या सबमिट करा)</a>
+            <a href="{{ url_for('university') }}">विद्यापीठ डॅशबोर्ड</a>
+            <a href="{{ url_for('industry') }}">उद्योग भागीदारी</a>
+        </nav>
+    </header>
+
+    <!-- Main Industry Dashboard Content -->
+    <main class="dashboard-container">
+        <h2>विद्यापीठांनी विकसित केलेले तयार प्रोटोटाइप आणि संशोधन</h2>
+        <p>उद्योग भागीदार, सीएसआर (CSR) संस्था आणि स्टार्टअप्स या प्रकल्पांच्या व्यावसायिकिकरणासाठी किंवा निधीसाठी सहयोग करू शकतात.</p>
+        <hr style="margin-bottom: 20px; border: 0; border-top: 1px solid #ddd;">
+
+        <!-- Project Card 1 -->
+        <div class="project-card">
+            <span class="status-badge">स्थिती: प्रोटोटाइप तयार (Prototype Ready)</span>
+            <h3>कमी खर्चाचे सौर ऊर्जेवर चालणारे सिंचन पंप मॉडेल</h3>
+            <p><strong>विकसक संस्था:</strong> बीआयटी सिंदरी (BIT Sindri), धनबाद</p>
+            <p><strong>वर्णन:</strong> झारखंडमधील दुर्गम गावांसाठी डिझाइन केलेले, कमी देखभालीचा खर्च असणारे आणि स्थानिक सुट्या भागांपासून बनवता येण्यासारखे सौर पंप तंत्रज्ञान.</p>
+            <button class="fund-btn" onclick="alert('सहकार्य आणि निधी (Funding) प्रस्तावासाठी फॉर्म लवकरच उघडेल.')">सहकार्य करा / निधी पुरवा</button>
+        </div>
+
+        <!-- Project Card 2 -->
+        <div class="project-card">
+            <span class="status-badge">स्थिती: लॅब चाचणी पूर्ण (Lab Tested)</span>
+            <h3>स्थानिक वनोपजांवर आधारित सेंद्रिय खताची निर्मिती</h3>
+            <p><strong>विकसक संस्था:</strong> रांची विद्यापीठ, रांची</p>
+            <p><strong>वर्णन:</strong> जंगलातील टाकाऊ पानांपासून आणि स्थानिक कचऱ्यापासून जमिनीची सुपीकता वाढवणारे प्रगत सेंद्रिय खत तयार करण्याची पद्धत.</p>
+            <button class="fund-btn" onclick="alert('सहकार्य आणि निधी (Funding) प्रस्तावासाठी फॉर्म लवकरच उघडेल.')">सहकार्य करा / निधी पुरवा</button>
+        </div>
+
+    </main>
+
+</body>
+</html>
+```[cite: 2]
+
+हे बदल करून तुमच्या फाईल्स सेव्ह करा आणि ब्राउझर रिफ्रेश करून तपासा!
