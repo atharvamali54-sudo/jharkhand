@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>विद्यापीठ डॅशबोर्ड - झारखंड सोशल इनोव्हेशन पोर्टल</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <style>
         .dashboard-container {
             max-width: 900px;
@@ -51,13 +51,13 @@
 </head>
 <body>
 
-    <!-- Header / शीर्षभाग (सुधारित नेव्हिगेशनसह) -->
+    <!-- Header / शीर्षभाग -->
     <header>
         <h1>झारखंड सोशल इनोव्हेशन पोर्टल</h1>
         <nav>
-            <a href="index.html">नागरिक पोर्टल (समस्या सबमिट करा)</a>
-            <a href="university.html">विद्यापीठ डॅशबोर्ड</a>
-            <a href="industry.html">उद्योग भागीदारी</a>
+            <a href="{{ url_for('home') }}">नागरिक पोर्टल (समस्या सबमिट करा)</a>
+            <a href="{{ url_for('university') }}">विद्यापीठ डॅशबोर्ड</a>
+            <a href="{{ url_for('industry') }}">उद्योग भागीदारी</a>
         </nav>
     </header>
 
@@ -69,23 +69,24 @@
 
         <!-- Problem Card 1 -->
         <div class="problem-card">
-            <span class="badge">जल व्यवस्थापन (Water Resources)</span>
-            <h3>रांची ग्रामीण भागातील पिण्याच्या पाण्याची टंचाई</h3>
-            <p><strong>जिल्हा:</strong> रांची (Ranchi)</p>
-            <p><strong>वर्णन:</strong> गावातील विहिरींची पाणीपातळी उन्हाळ्यात खूप खाली जाते, ज्यामुळे महिलांना पाण्यासाठी दूरवर जावे लागते. कमी खर्चाच्या जलसंधारण उपायांची गरज आहे.</p>
-            <button class="action-btn" onclick="alert('संघ (Team) नेमणूक प्रक्रिया सुरू होत आहे...')">विद्यार्थी संघ नियुक्त करा</button>
+            <span class="badge">जल व्यवस्थापन (Water Resources)[cite: 3]</span>
+            <h3>रांची ग्रामीण भागातील पिण्याच्या पाण्याची टंचाई[cite: 3]</h3>
+            <p><strong>जिल्हा:</strong> रांची (Ranchi)[cite: 3]</p>
+            <p><strong>वर्णन:</strong> गावातील विहिरींची पाणीपातळी उन्हाळ्यात खूप खाली जाते, ज्यामुळे महिलांना पाण्यासाठी दूरवर जावे लागते. कमी खर्चाच्या जलसंधारण उपायांची गरज आहे.[cite: 3]</p>
+            <button class="action-btn" onclick="alert('संघ (Team) नेमणूक प्रक्रिया सुरू होत आहे...')">विद्यार्थी संघ नियुक्त करा[cite: 3]</button>
         </div>
 
         <!-- Problem Card 2 -->
         <div class="problem-card">
-            <span class="badge">कृषी (Agriculture)</span>
-            <h3>धनबाद परिसरातील भाजीपाल्याची साठवणूक आणि वाहतूक</h3>
-            <p><strong>जिल्हा:</strong> धनबाद (Dhanbad)</p>
-            <p><strong>वर्णन:</strong> स्थानिक शेतकऱ्यांना भाजीपाल्याचे योग्य मूल्य मिळत नाही कारण कोल्ड स्टोरेज आणि वाहतुकीच्या पुरेशा सुविधा नाहीत.</p>
-            <button class="action-btn" onclick="alert('संघ (Team) नेमणूक प्रक्रिया सुरू होत आहे...')">विद्यार्थी संघ नियुक्त करा</button>
+            <span class="badge">कृषी (Agriculture)[cite: 3]</span>
+            <h3>धनबाद परिसरातील भाजीपाल्याची साठवणूक आणि वाहतूक[cite: 3]</h3>
+            <p><strong>जिल्हा:</strong> धनबाद (Dhanbad)[cite: 3]</p>
+            <p><strong>वर्णन:</strong> स्थानिक शेतकऱ्यांना भाजीपाल्याचे योग्य मूल्य मिळत नाही कारण कोल्ड स्टोरेज आणि वाहतुकीच्या पुरेशा सुविधा नाहीत.[cite: 3]</p>
+            <button class="action-btn" onclick="alert('संघ (Team) नेमणूक प्रक्रिया सुरू होत आहे...')">विद्यार्थी संघ नियुक्त करा[cite: 3]</button>
         </div>
 
     </main>
 
 </body>
 </html>
+```[cite: 3]
