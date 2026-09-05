@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>विद्यापीठ डॅशबोर्ड - झारखंड सोशल इनोव्हेशन पोर्टल</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .dashboard-container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .problem-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #fafafa;
+        }
+        .problem-card h3 {
+            margin-top: 0;
+            color: #1e3a8a;
+        }
+        .badge {
+            display: inline-block;
+            padding: 5px 10px;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 4px;
+            background-color: #fef08a;
+            color: #854d0e;
+        }
+        .action-btn {
+            background-color: #16a34a;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .action-btn:hover {
+            background-color: #15803d;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / शीर्षभाग (सुधारित नेव्हिगेशनसह) -->
+    <header>
+        <h1>झारखंड सोशल इनोव्हेशन पोर्टल</h1>
+        <nav>
+            <a href="index.html">नागरिक पोर्टल (समस्या सबमिट करा)</a>
+            <a href="university.html">विद्यापीठ डॅशबोर्ड</a>
+            <a href="industry.html">उद्योग भागीदारी</a>
+        </nav>
+    </header>
+
+    <!-- Main Dashboard Content -->
+    <main class="dashboard-container">
+        <h2>तुमच्या विद्यापीठाला प्राप्त झालेल्या समस्या</h2>
+        <p>खालील समस्यांवर बहुविद्याशाखीय विद्यार्थी संघ (Student Teams) नियुक्त करा.</p>
+        <hr style="margin-bottom: 20px; border: 0; border-top: 1px solid #ddd;">
+
+        <!-- Problem Card 1 -->
+        <div class="problem-card">
+            <span class="badge">जल व्यवस्थापन (Water Resources)</span>
+            <h3>रांची ग्रामीण भागातील पिण्याच्या पाण्याची टंचाई</h3>
+            <p><strong>जिल्हा:</strong> रांची (Ranchi)</p>
+            <p><strong>वर्णन:</strong> गावातील विहिरींची पाणीपातळी उन्हाळ्यात खूप खाली जाते, ज्यामुळे महिलांना पाण्यासाठी दूरवर जावे लागते. कमी खर्चाच्या जलसंधारण उपायांची गरज आहे.</p>
+            <button class="action-btn" onclick="alert('संघ (Team) नेमणूक प्रक्रिया सुरू होत आहे...')">विद्यार्थी संघ नियुक्त करा</button>
+        </div>
+
+        <!-- Problem Card 2 -->
+        <div class="problem-card">
+            <span class="badge">कृषी (Agriculture)</span>
+            <h3>धनबाद परिसरातील भाजीपाल्याची साठवणूक आणि वाहतूक</h3>
+            <p><strong>जिल्हा:</strong> धनबाद (Dhanbad)</p>
+            <p><strong>वर्णन:</strong> स्थानिक शेतकऱ्यांना भाजीपाल्याचे योग्य मूल्य मिळत नाही कारण कोल्ड स्टोरेज आणि वाहतुकीच्या पुरेशा सुविधा नाहीत.</p>
+            <button class="action-btn" onclick="alert('संघ (Team) नेमणूक प्रक्रिया सुरू होत आहे...')">विद्यार्थी संघ नियुक्त करा</button>
+        </div>
+
+    </main>
+
+</body>
+</html>
