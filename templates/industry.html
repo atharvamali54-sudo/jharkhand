@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>उद्योग भागीदारी डॅशबोर्ड - झारखंड सोशल इनोव्हेशन पोर्टल</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <style>
         .dashboard-container {
             max-width: 900px;
@@ -51,13 +51,13 @@
 </head>
 <body>
 
-    <!-- Header / शीर्षभाग (सुधारित नेव्हिगेशनसह) -->
+    <!-- Header / शीर्षभाग -->
     <header>
         <h1>झारखंड सोशल इनोव्हेशन पोर्टल</h1>
         <nav>
-            <a href="index.html">नागरिक पोर्टल (समस्या सबमिट करा)</a>
-            <a href="university.html">विद्यापीठ डॅशबोर्ड</a>
-            <a href="industry.html">उद्योग भागीदारी</a>
+            <a href="{{ url_for('home') }}">नागरिक पोर्टल (समस्या सबमिट करा)</a>
+            <a href="{{ url_for('university') }}">विद्यापीठ डॅशबोर्ड</a>
+            <a href="{{ url_for('industry') }}">उद्योग भागीदारी</a>
         </nav>
     </header>
 
